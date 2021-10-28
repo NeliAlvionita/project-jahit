@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.master', ['title' => 'Data Produk'])
 
 @section('title', 'Data Produk')
 
@@ -7,7 +7,7 @@
 <div class="card">
     <div class="card-header">
       <h3 class="card-title">Data Produk</h3>
-      <a href="/admin/produk/#" class="btn btn-primary float-right">Tambah</a>
+      <a href="/admin/produk/addproduk" class="btn btn-primary float-right">Tambah</a>
     </div>
     <div class="card-body p-0">
       <table class="table table-hover">
