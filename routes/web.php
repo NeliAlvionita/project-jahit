@@ -24,3 +24,9 @@ Route::get('/admin/produk', 'ProdukController@index');
 
 /* Route Tabel Pelanggan*/
 Route::get('/admin/pelanggan', 'PelangganController@index');
+
+/* Route Form tambah produk*/
+Route::get('/admin/produk/addproduk', 'ProdukController@add');
+
+/* Route Form tambah pelanggan*/
+Route::get('/admin/pelanggan/addpelanggan', 'PelangganController@add');

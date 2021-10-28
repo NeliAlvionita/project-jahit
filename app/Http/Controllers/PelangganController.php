@@ -12,4 +12,8 @@ class PelangganController extends Controller
 
         return view('admin/pelanggan/index', ['pelanggan'=> $pelanggan]);
     }
+
+    public function add(){
+        return view('admin.pelanggan.addpelanggan');
+    }
 }

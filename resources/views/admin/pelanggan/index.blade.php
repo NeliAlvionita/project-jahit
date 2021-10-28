@@ -7,7 +7,7 @@
 <div class="card">
     <div class="card-header">
       <h3 class="card-title">Data Pelanggan</h3>
-      <a href="/admin/produk/#" class="btn btn-primary float-right">Tambah</a>
+      <a href="/admin/pelanggan/addpelanggan" class="btn btn-primary float-right">Tambah</a>
     </div>
     <div class="card-body p-0">
       <table class="table table-hover">

@@ -12,4 +12,8 @@ class ProdukController extends Controller
 
         return view('admin/produk/index', ['produk'=> $produk]);
     }
+    
+    public function add(){
+        return view('admin.produk.addproduk');
+    }
 }
