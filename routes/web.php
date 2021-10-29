@@ -21,12 +21,22 @@ Route::get('/admin', 'AdminController@admin');
 
 /* Route Tabel Produk*/
 Route::get('/admin/produk', 'ProdukController@index');
+/* tambah produk*/
+Route::get('/admin/produk/addproduk', 'ProdukController@add');
+Route::post('/admin/produk', 'ProdukController@store');
+Route::get('/admin/produk/{id_produk}/detailproduk', 'ProdukController@detail');
+Route::get('/admin/produk/{id_produk}/ubahproduk', 'ProdukController@ubah');
+Route::put('/admin/produk/{id_produk}', 'ProdukController@update');
+Route::delete('/admin/produk/{id_produk}', 'ProdukController@delete');
 
 /* Route Tabel Pelanggan*/
 Route::get('/admin/pelanggan', 'PelangganController@index');
-
-/* Route Form tambah produk*/
-Route::get('/admin/produk/addproduk', 'ProdukController@add');
-
-/* Route Form tambah pelanggan*/
+/* tambah pelanggan*/
 Route::get('/admin/pelanggan/addpelanggan', 'PelangganController@add');
+Route::put('/admin/pelanggan', 'pelangganController@store');
+Route::get('/admin/pelanggan/{id_pelanggan}/ubahpelanggan', 'pelangganController@ubah');
+Route::put('/admin/pelanggan/{id_pelanggan}', 'pelangganController@update');
+Route::delete('/admin/pelanggan/{id_pelanggan}', 'pelangganController@delete');
+
+
+

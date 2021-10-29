@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'Data Produk')
+@section('title', 'Data Pelanggan')
 
 @section('content')
 
@@ -33,6 +33,14 @@
             <td>{{$item->password_pelanggan}}</td>
             <td>{{$item->telp_pelanggan}}</td>
             <td>{{$item->alamat_pelanggan}}</td>
+            <td>
+                <form action="/admin/pelanggan/{{$item->id_pelanggan}}" method="post">
+                  @csrf
+                  @method('DELETE')
+                  <button class="btn btn-danger float-right ml-2" type="submit">Hapus</button>
+                </form>       
+                <a href="/admin/pelanggan/{{$item->id_pelanggan}}/ubahpelanggan" class="btn btn-warning float-right">Ubah</a>
+            </td>
           </tr>
           @endforeach
         </tbody>

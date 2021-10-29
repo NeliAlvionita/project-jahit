@@ -16,7 +16,7 @@ class CreatePelanggansTable extends Migration
         Schema::create('pelanggan', function (Blueprint $table) {
             $table->bigIncrements("id_pelanggan");
             $table->string("nama_pelanggan");
-            $table->integer("email_pelanggan");
+            $table->string("email_pelanggan");
             $table->string("password_pelanggan");
             $table->string("telp_pelanggan");
             $table->string("alamat_pelanggan");
