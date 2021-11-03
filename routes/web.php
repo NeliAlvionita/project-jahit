@@ -31,12 +31,7 @@ Route::delete('/admin/produk/{id_produk}', 'ProdukController@delete');
 
 /* Route Tabel Pelanggan*/
 Route::get('/admin/pelanggan', 'PelangganController@index');
-/* tambah pelanggan*/
-Route::get('/admin/pelanggan/addpelanggan', 'PelangganController@add');
-Route::put('/admin/pelanggan', 'pelangganController@store');
-Route::get('/admin/pelanggan/{id_pelanggan}/ubahpelanggan', 'pelangganController@ubah');
-Route::put('/admin/pelanggan/{id_pelanggan}', 'pelangganController@update');
-Route::delete('/admin/pelanggan/{id_pelanggan}', 'pelangganController@delete');
+
 
 
 
