@@ -32,12 +32,13 @@
             <td>{{$item->foto_produk}}</td>
             <td>{{$item->deskripsi_produk}}</td>
             <td>
-              <form action="/admin/produk/{{$item->id_produk}}" method="post">
-                @csrf
-                @method('DELETE')
-                <button class="btn btn-danger float-right ml-2" type="submit">Hapus</button>
-              </form>       
-              <a href="/admin/produk/{{$item->id_produk}}/ubahproduk" class="btn btn-warning float-right">Ubah</a>
+            <form action="/admin/produk/{{$item->id_produk}}" method="POST">
+              <a class="btn btn-primary" href="/admin/produk/{{$item->id_produk}}/ubahproduk">Tampil</a>
+              <a class="btn btn-warning" href="/admin/produk/{{$item->id_produk}}/ubahproduk">Edit</a>
+              @csrf
+              @method('DELETE')
+              <button type="submit" class="btn btn-danger">Hapus</button>
+            </form>
             </td>
           </tr>
           @endforeach

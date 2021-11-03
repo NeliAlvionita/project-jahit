@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.master', ['title' => 'Ubah Data Produk')
 @section('title', 'Ubah Data Produk')
 
 @section('content')
@@ -23,14 +23,13 @@
       </div>
       <div class="form-group">
         <label for="foto">Foto Produk</label>
-        <input type="text" name="foto" id="foto" class="form-control" placeholder="Foto"
+        <input type="file" name="foto" id="foto" class="form-control" placeholder="Foto"
           aria-describedby="helpId" value="{{$produk->foto_produk}}">
         <small id="helpId" class="text-muted">File berupa JPG/JPEG</small>
       </div>
       <div class="form-group">
         <label for="deksripsi">Deskripsi Produk</label>
         <textarea name="deskripsi" id="deskripsi" class="form-control" value="{{$produk->deskripsi_produk}}"></textarea>
-        <small id="helpId" class="text-muted">File berupa JPG/JPEG</small>
       </div>
       <button type="submit" class="btn btn-success">Kirim</button>
     </form>

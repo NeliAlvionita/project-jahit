@@ -74,6 +74,10 @@ class ProdukController extends Controller
         }
     }
 
-
+    /**public function show(Request $request)
+    {
+        $produk = Produk::find($request->id_produk);
+        return view('/admin/produk/ubahproduk',  ['produk' => $produk]);
+    }**/
 
 }
