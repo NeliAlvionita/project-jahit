@@ -136,7 +136,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="/admin/#" class="nav-link">
+                <a href="/admin/pemesanan" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Data Pemesanan</p>
                 </a>

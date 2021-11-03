@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.master', ['title' => 'Data Pelanggan'])
 
 @section('title', 'Data Pelanggan')
 

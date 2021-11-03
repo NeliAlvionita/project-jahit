@@ -32,6 +32,8 @@ Route::delete('/admin/produk/{id_produk}', 'ProdukController@delete');
 /* Route Tabel Pelanggan*/
 Route::get('/admin/pelanggan', 'PelangganController@index');
 
+/* Route Tabel Pemesanan */
+Route::get('/admin/pemesanan', 'PemesananController@index');
 
 
 
