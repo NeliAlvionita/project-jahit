@@ -14,7 +14,8 @@ class RelasiDetailpemesananPemesanan extends Migration
     public function up()
     {
         Schema::table('detail_pemesanan', function (Blueprint $table) {
-            $table->foreign("id_pemesanan")->references('id_pemesanan')->on('pemesanan');
+            $table->foreign("id_pemesanan")->references('id_pemesanan')
+            ->on('pemesanan');
         });
     }
 
