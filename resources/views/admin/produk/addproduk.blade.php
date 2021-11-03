@@ -20,7 +20,7 @@
                         </div>
                         <div class="form-group">
                             <label for="foto">Foto</label>
-                            <input type="text" name="foto" id="foto" class="form-control">
+                            <input type="file" name="foto" id="foto" class="form-control">
                             <small id="helpId" class="text-muted">File berupa JPG/JPEG</small>
                         </div>
                         <div class="form-group">
