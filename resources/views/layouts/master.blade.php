@@ -142,13 +142,13 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="/admin/#" class="nav-link">
+                <a href="/admin/pembayaran" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Data Pembayaran</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="/admin/#" class="nav-link">
+                <a href="/admin/laporan" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Data Laporan</p>
                 </a>
