@@ -45,12 +45,12 @@ class ProdukController extends Controller
     {
         $this->validate($request, [
             'nama' => 'required',
-            'harga' => 'required',
+            'harga' => 'required|numeric',
             'foto' => 'required',
             'deskripsi' => 'required'
         ]);
 
-        $produk = new Produk();
+        $produk = Produk::findOrFail($request->id_produk);
         $produk->nama_produk = $request->nama;
         $produk->harga_produk = $request->harga;
         $produk->foto_produk = $request->foto;

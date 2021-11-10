@@ -31,7 +31,7 @@
         <label for="deksripsi">Deskripsi Produk</label>
         <textarea name="deskripsi" id="deskripsi" class="form-control" value="{{$produk->deskripsi_produk}}"></textarea>
       </div>
-      <button type="submit" class="btn btn-success">Kirim</button>
+      <button type="submit" class="btn btn-success">Simpan</button>
     </form>
   </div>
 </div>
