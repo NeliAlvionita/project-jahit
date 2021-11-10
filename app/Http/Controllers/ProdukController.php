@@ -22,14 +22,15 @@ class ProdukController extends Controller
         $this->validate($request, [
             'nama' => 'required',
             'harga' => 'required|numeric',
-            'foto' => 'required',
+            'foto' => 'required|image',
             'deskripsi' => 'required'
         ]);
+        $upload_foto = $request->foto->store('produk');
 
         $produk = new Produk();
         $produk->nama_produk = $request->nama;
         $produk->harga_produk = $request->harga;
-        $produk->foto_produk = $request->foto;
+        $produk->foto_produk = $upload_foto;
         $produk->deskripsi_produk = $request->deskripsi;
         if ($produk->save()) {
             return redirect('/admin/produk');
@@ -46,7 +47,7 @@ class ProdukController extends Controller
         $this->validate($request, [
             'nama' => 'required',
             'harga' => 'required|numeric',
-            'foto' => 'required',
+            'foto' => 'required|image',
             'deskripsi' => 'required'
         ]);
 

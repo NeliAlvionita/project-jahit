@@ -8,7 +8,7 @@
             <h3 class="card-title">Tambah Produk</h3>
         </div>
          <div class="card-body">
-            <form action="/admin/produk" method="post">
+            <form action="/admin/produk" method="post" enctype="multipart/form-data">
             @csrf
             <div class="form-group">
                 <label for="nama">Nama</label>

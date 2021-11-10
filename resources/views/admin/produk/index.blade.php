@@ -29,7 +29,7 @@
             <td>{{$item->id_produk}}</td>
             <td>{{$item->nama_produk}}</td>
             <td>{{$item->harga_produk}}</td>
-            <td>{{$item->foto_produk}}</td>
+            <td><img src="{{asset($item->foto_produk)}}"></td>
             <td>{{$item->deskripsi_produk}}</td>
             <td>
             <form action="/admin/produk/{{$item->id_produk}}" method="POST">
