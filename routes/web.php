@@ -20,14 +20,16 @@ Route::get('/', function () {
 Route::get('/admin', 'AdminController@admin');
 
 /* Route Tabel Produk*/
+/*---------------------------------------------------------------- */
 Route::get('/admin/produk', 'ProdukController@index');
 /* tambah produk*/
 Route::get('/admin/produk/addproduk', 'ProdukController@add');
+/* simpan produk */
 Route::post('/admin/produk', 'ProdukController@store');
-Route::get('/admin/produk/{id_produk}/detailproduk', 'ProdukController@detail');
 Route::get('/admin/produk/{id_produk}/ubahproduk', 'ProdukController@ubah');
 Route::put('/admin/produk/{id_produk}', 'ProdukController@update');
 Route::delete('/admin/produk/{id_produk}', 'ProdukController@delete');
+/* -------------------------------------------------------------------- */
 
 /* Route Tabel Pelanggan*/
 Route::get('/admin/pelanggan', 'PelangganController@index');

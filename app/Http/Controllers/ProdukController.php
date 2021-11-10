@@ -21,7 +21,7 @@ class ProdukController extends Controller
     {
         $this->validate($request, [
             'nama' => 'required',
-            'harga' => 'required',
+            'harga' => 'required|numeric',
             'foto' => 'required',
             'deskripsi' => 'required'
         ]);
@@ -34,11 +34,6 @@ class ProdukController extends Controller
         if ($produk->save()) {
             return redirect('/admin/produk');
         }
-    }
-    public function detail(Request $request)
-    {
-        $produk = Produk::find($request->id_produk);
-        return view('/admin/produk/detailproduk',  ['detail' => $produk]);
     }
 
     public function ubah(Request $request)
