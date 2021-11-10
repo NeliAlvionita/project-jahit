@@ -6,7 +6,20 @@
 
 <div class="card">
     <div class="card-header">
-      <h3 class="card-title">LAPORAN</h3>
+      <h2 class="card-title">LAPORAN</h2>
+    </div>
+    <div class="card-body">
+    <form action="/admin/laporan/#" method="POST">
+      <div class="form-group">
+      <label for="nama">Tanggal Mulai</label>
+      <input type="date" name="tanggal_mulai" id="tanggal_mulai" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="nama">Tanggal Akhir</label>
+        <input type="date" name="tanggal_akhir" id="tanggal_akhir" class="form-control">
+      </div>
+      <a class="btn btn-warning" href="/admin/pemesanan/#">Filter</a>
+    </form>
     </div>
     <div class="card-body p-0">
       <table class="table table-hover">
@@ -16,7 +29,7 @@
             <th>Pelanggan</th>
             <th>Tanggal</th>
             <th>Status</th>
-            <th>Jumlah</th>
+            <th>Total Pembayaran</th>
           </tr>
         </thead>
         <tbody>
@@ -36,6 +49,7 @@
   </div>
   <form action="/admin/laporan/#" method="POST">
     <a class="btn btn-danger" href="/admin/pemesanan/#">Cetak PDF</a>
+    <a class="btn btn-success" href="/admin/pemesanan/#">Cetak Excel</a>
   </form>
   
   @endsection
