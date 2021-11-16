@@ -10,8 +10,10 @@ class Pembayaran extends Model
     protected $primaryKey = "id_pembayaran";
     protected $fillable = ["id_pemesanan", "bank", "bukti"];
 
-    public function pelanggan(){
-        return $this-> belongsTo('App\Pelanggan', 'id_pelanggan', 'id_pelanggan');
+    public $timestamps = false;
+
+    public function pemesanan(){
+        return $this-> belongsTo('App\Pemesanan', 'id_pemesanan', 'id_pemesanan');
     }
 }
 
