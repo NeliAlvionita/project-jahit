@@ -18,7 +18,7 @@
         <label for="nama">Tanggal Akhir</label>
         <input type="date" name="tanggal_akhir" id="tanggal_akhir" class="form-control">
       </div>
-      <a class="btn btn-warning" href="/admin/pemesanan/#">Filter</a>
+      <a class="btn btn-warning" href="/admin/laporan/#">Filter</a>
     </form>
     </div>
     <div class="card-body p-0">

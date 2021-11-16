@@ -11,8 +11,8 @@ class PemesananController extends Controller
         return view('admin/pemesanan/index', ['pemesanan'=> $pemesanan]);
     }
     public function detail(Request $request)
-   {
-       $pemesanan = Pemesanan::find($request->id_pemesanan);
-       return view('/admin/pemesanan/detail',  ['pemesanan'=> $pemesanan]);
-   }
+    {
+        $pemesanan = Pemesanan::find($request->id_pemesanan);
+        return view('/admin/pemesanan/detail',  ['pemesanan' => $pemesanan]);
+    }
 }

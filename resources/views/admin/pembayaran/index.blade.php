@@ -34,7 +34,7 @@
             <td>{{$item->bukti}}</td>
             <td>
             <form action="/admin/pembayaran/{{$item->id_pembayaran}}" method="POST">
-              <a class="btn btn-primary" href="/admin/pembayaran/#">Lihat Detail</a>
+              <a class="btn btn-primary" href="/admin/pembayaran/{{$item->id_pembayaran}}/detail">Lihat Detail</a>
             </form>
             </td>
           </tr>

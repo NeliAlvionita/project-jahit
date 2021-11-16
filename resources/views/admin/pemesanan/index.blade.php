@@ -34,7 +34,7 @@
             <td>{{$item->status_pemesanan}}</td>
             <td>
             <form action="/admin/pemesanan/{{$item->id_pemesanan}}" method="POST">
-              <a class="btn btn-primary" href="/admin/pemesanan/detail">Lihat Detail</a>
+              <a class="btn btn-primary" href="/admin/pemesanan/{{$item->id_pemesanan}}/detail">Lihat Detail</a>
             </form>
             </td>
           </tr>
