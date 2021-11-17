@@ -64,7 +64,7 @@ class ProdukController extends Controller
     public function delete(Request $request)
     {
         $produk = Produk::findOrFail($request->id_produk);
-
+    
         if ($produk->delete()) {
             return redirect('/admin/produk');
         }
@@ -73,7 +73,7 @@ class ProdukController extends Controller
     public function show(Request $request)
     {
         $produk = Produk::find($request->id_produk);
-        return view('/admin/produk/showproduk',  ['produk' => $produk]);
+        return view('/admin/produk/ubahproduk',  ['produk' => $produk]);
     }
 
 }

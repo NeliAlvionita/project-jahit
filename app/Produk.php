@@ -11,4 +11,9 @@ class Produk extends Model
     protected $fillable = ["nama_produk","harga_produk", "foto_produk", "deskripsi_produk"];
 
     public $timestamps = false;
+
+    public function pemesanan()
+    {
+        return $this->hasMany('App\Pemesanan');
+    }
 }
