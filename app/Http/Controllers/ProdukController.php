@@ -21,24 +21,20 @@ class ProdukController extends Controller
     {
         $this->validate($request, [
             'nama' => 'required',
-            'harga' => 'required',
-            'foto' => 'required',
+            'harga' => 'required|numeric',
+            'foto' => 'required|image',
             'deskripsi' => 'required'
         ]);
+        $upload_foto = $request->foto->store('produk');
 
         $produk = new Produk();
         $produk->nama_produk = $request->nama;
         $produk->harga_produk = $request->harga;
-        $produk->foto_produk = $request->foto;
+        $produk->foto_produk = $upload_foto;
         $produk->deskripsi_produk = $request->deskripsi;
         if ($produk->save()) {
             return redirect('/admin/produk');
         }
-    }
-    public function detail(Request $request)
-    {
-        $produk = Produk::find($request->id_produk);
-        return view('/admin/produk/detailproduk',  ['detail' => $produk]);
     }
 
     public function ubah(Request $request)
@@ -50,12 +46,12 @@ class ProdukController extends Controller
     {
         $this->validate($request, [
             'nama' => 'required',
-            'harga' => 'required',
-            'foto' => 'required',
+            'harga' => 'required|numeric',
+            'foto' => 'required|image',
             'deskripsi' => 'required'
         ]);
 
-        $produk = new Produk();
+        $produk = Produk::findOrFail($request->id_produk);
         $produk->nama_produk = $request->nama;
         $produk->harga_produk = $request->harga;
         $produk->foto_produk = $request->foto;

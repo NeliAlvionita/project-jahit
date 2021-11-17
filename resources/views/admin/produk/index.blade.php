@@ -29,11 +29,10 @@
             <td>{{$item->id_produk}}</td>
             <td>{{$item->nama_produk}}</td>
             <td>{{$item->harga_produk}}</td>
-            <td>{{$item->foto_produk}}</td>
+            <td><img src="{{asset($item->foto_produk)}}"></td>
             <td>{{$item->deskripsi_produk}}</td>
             <td>
-              <form action="/admin/produk/{{$item->id_produk}}" method="POST">
-              <a class="btn btn-primary" href="/admin/produk/{{$item->id_produk}}/showproduk">Tampil</a>
+            
               <a class="btn btn-warning" href="/admin/produk/{{$item->id_produk}}/ubahproduk">Edit</a>
               @csrf
               @method('DELETE')

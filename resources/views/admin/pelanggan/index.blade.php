@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.master', ['title' => 'Data Pelanggan'])
 
 @section('title', 'Data Pelanggan')
 
@@ -7,7 +7,6 @@
 <div class="card">
     <div class="card-header">
       <h3 class="card-title">Data Pelanggan</h3>
-      <a href="/admin/pelanggan/addpelanggan" class="btn btn-primary float-right">Tambah</a>
     </div>
     <div class="card-body p-0">
       <table class="table table-hover">
@@ -20,7 +19,6 @@
             <th>Password</th>
             <th>No Telepon</th>
             <th>Alamat</th>
-            <th>Aksi</th>
           </tr>
         </thead>
         <tbody>
@@ -33,14 +31,6 @@
             <td>{{$item->password_pelanggan}}</td>
             <td>{{$item->telp_pelanggan}}</td>
             <td>{{$item->alamat_pelanggan}}</td>
-            <td>
-                <form action="/admin/pelanggan/{{$item->id_pelanggan}}" method="post">
-                  @csrf
-                  @method('DELETE')
-                  <button class="btn btn-danger float-right ml-2" type="submit">Hapus</button>
-                </form>       
-                <a href="/admin/pelanggan/{{$item->id_pelanggan}}/ubahpelanggan" class="btn btn-warning float-right">Ubah</a>
-            </td>
           </tr>
           @endforeach
         </tbody>
