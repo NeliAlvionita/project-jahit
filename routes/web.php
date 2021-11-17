@@ -39,4 +39,7 @@ Route::put('/admin/pelanggan/{id_pelanggan}', 'pelangganController@update');
 Route::delete('/admin/pelanggan/{id_pelanggan}', 'pelangganController@delete');
 
 
+/* Route Pelanggan*/
+Route::get('/pelanggan', 'HomeController@index');
 
+Route::get('/p', 'WelcomeController@index');

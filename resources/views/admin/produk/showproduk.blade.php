@@ -3,17 +3,18 @@
 @section('title', 'Data Produk')
 
 @section('content')
+
+@foreach ($produk as $index => $item)
 <div class="row">
     <div class="col-lg-12 margin-tb">
         <div class="pull-left">
-            <h2> Show Product</h2>
+            <h1> Show Product</h1>
         </div>
         <div class="pull-right">
             <a class="btn btn-primary" href="/admin/produk/"> Back</a>
         </div>
     </div>
 </div>
-@foreach ($produk as $index => $item)
 <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">

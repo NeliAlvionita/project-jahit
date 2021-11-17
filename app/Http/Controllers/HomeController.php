@@ -51,10 +51,4 @@ class PelangganController extends Controller
             return redirect('/admin/pelanggan');
         }
     }
-
-    public function home(){
-        $pelanggan = Pelanggan::all();
-
-        return view('pelanggan/home', ['pelanggan'=> $pelanggan]);
-    }
 }
