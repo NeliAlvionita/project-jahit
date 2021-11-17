@@ -32,7 +32,7 @@
             <td><img src="{{asset($item->foto_produk)}}"></td>
             <td>{{$item->deskripsi_produk}}</td>
             <td>
-            <form action="/admin/produk/{{$item->id_produk}}" method="POST">
+            
               <a class="btn btn-warning" href="/admin/produk/{{$item->id_produk}}/ubahproduk">Edit</a>
               @csrf
               @method('DELETE')

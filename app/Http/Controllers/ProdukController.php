@@ -70,10 +70,10 @@ class ProdukController extends Controller
         }
     }
 
-    /**public function show(Request $request)
+    public function show(Request $request)
     {
         $produk = Produk::find($request->id_produk);
-        return view('/admin/produk/ubahproduk',  ['produk' => $produk]);
-    }**/
+        return view('/admin/produk/showproduk',  ['produk' => $produk]);
+    }
 
 }

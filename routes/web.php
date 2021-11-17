@@ -38,9 +38,3 @@ Route::get('/admin/pelanggan', 'PelangganController@index');
 Route::get('/admin/pemesanan', 'PemesananController@index');
 Route::get('/admin/pemesanan/{id_pemesanan}/detail', 'PemesananController@detail');
 
-/* Route Tabel Pembayaran */
-Route::get('/admin/pembayaran', 'PembayaranController@index');
-Route::get('/admin/pembayaran/{id_pembayaran}/detail', 'PembayaranController@detail');
-
-/* Route Tabel Laporan */
-Route::get('/admin/laporan', 'LaporanController@index');
