@@ -53,4 +53,3 @@ Route::get('/welcome', 'WelcomeController@index');
 Route::get('/pelanggan', 'PelangganController@pelanggan');
 Route::get('/pelanggan/pembayaran', 'PelangganController@pay');
 Route::get('/pelanggan/pemesanan', 'PelangganController@order');
-
