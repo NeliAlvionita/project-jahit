@@ -44,3 +44,5 @@ Route::get('/admin/pembayaran/{id_pembayaran}/detail', 'PembayaranController@det
 
 /* Route Tabel Laporan */
 Route::get('/admin/laporan', 'LaporanController@index');
+
+Route::post('/admin/laporan/filer', 'LaporanController@filer');
