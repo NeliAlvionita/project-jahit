@@ -14,7 +14,6 @@
           <tr>
             <th>No</th>
             <th>ID Pemesanan</th>
-            <th>Nama Pelanggan</th>
             <th>Tanggal</th>
             <th>Total</th>
             <th>Alamat</th>
@@ -26,7 +25,6 @@
           <tr>
             <td>{{$index + 1}}</td>
             <td>{{$item->id_pemesanan}}</td>
-            <td>{{$item->pelanggan->nama_pelanggan}}</td>
             <td>{{$item->tanggal_pemesanan}}</td>
             <td>{{$item->total_pemesanan}}</td>
             <td>{{$item->alamat_pemesanan}}</td>
