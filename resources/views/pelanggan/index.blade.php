@@ -1,0 +1,1 @@
+@extends('pelanggan.layouts.master')
