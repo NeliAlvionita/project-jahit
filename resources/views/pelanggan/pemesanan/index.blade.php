@@ -18,6 +18,7 @@
             <th>Total</th>
             <th>Alamat</th>
             <th>Status</th>
+            <th>Aksi</th>
           </tr>
         </thead>
         <tbody>
@@ -29,7 +30,9 @@
             <td>{{$item->total_pemesanan}}</td>
             <td>{{$item->alamat_pemesanan}}</td>
             <td>{{$item->status_pemesanan}}</td>
-            <td>
+            <td><form action="/pelanggan/pembayaran/{{$item->id_pembayaran}}" method="POST">
+              <a class="btn btn-primary" href="/pelanggan/pembayaran/{{$item->id_pembayaran}}/detail">Lihat Detail</a>
+            </form>
             </td>
           </tr>
           @endforeach
