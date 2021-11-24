@@ -7,13 +7,15 @@ use Illuminate\Http\Request;
 
 class ProdukController extends Controller
 {
-    public function index(){
+    public function index()
+    {
         $produk = Produk::all();
 
-        return view('admin/produk/index', ['produk'=> $produk]);
+        return view('admin/produk/index', ['produk' => $produk]);
     }
-    
-    public function add(){
+
+    public function add()
+    {
         return view('admin/produk/addproduk');
     }
 
@@ -44,21 +46,26 @@ class ProdukController extends Controller
     }
     public function update(Request $request)
     {
-        $this->validate($request, [
-            'nama' => 'required',
-            'harga' => 'required|numeric',
-            'foto' => 'required|image',
-            'deskripsi' => 'required'
-        ]);
+        // dd($request->id_produk);
+        // $this->validate($request, [
+        //     'nama' => 'required',
+        //     'harga' => 'required|numeric',
+        //     'foto' => 'required|image'
+        // ]);
 
         $produk = Produk::findOrFail($request->id_produk);
         $produk->nama_produk = $request->nama;
         $produk->harga_produk = $request->harga;
-        $produk->foto_produk = $request->foto;
-        $produk->deskripsi_produk = $request->deskripsi;
-        if ($produk->save()) {
-            return redirect('/admin/produk');
+        if (!empty($request->foto)) {
+            $produk->foto_produk = $request->foto;
         }
+        if (!empty($request->deskripsi)) {
+
+            $produk->deskripsi_produk = $request->deskripsi;
+        }
+        $produk->save();
+
+        return redirect('/admin/produk');
     }
 
     public function delete(Request $request)
@@ -73,7 +80,6 @@ class ProdukController extends Controller
     public function show(Request $request)
     {
         $produk = Produk::find($request->id_produk);
-        return view('/admin/produk/showproduk',  ['produk' => $produk]);
+        return view('/admin/produk/ubahproduk',  ['produk' => $produk]);
     }
-
 }

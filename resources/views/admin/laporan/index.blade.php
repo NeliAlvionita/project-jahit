@@ -9,7 +9,8 @@
       <h2 class="card-title">LAPORAN</h2>
     </div>
     <div class="card-body">
-    <form action="/admin/laporan/#" method="POST">
+    <form action="/admin/laporan/filer" method="POST">
+      @csrf
       <div class="form-group">
       <label for="nama">Tanggal Mulai</label>
       <input type="date" name="tanggal_mulai" id="tanggal_mulai" class="form-control">
@@ -18,7 +19,7 @@
         <label for="nama">Tanggal Akhir</label>
         <input type="date" name="tanggal_akhir" id="tanggal_akhir" class="form-control">
       </div>
-      <a class="btn btn-warning" href="/admin/laporan/#">Filter</a>
+      <button class="btn btn-warning" type="submit">Filter</button>
     </form>
     </div>
     <div class="card-body p-0">
