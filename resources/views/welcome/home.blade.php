@@ -59,10 +59,10 @@
     <div class="row">
         <div class="col-md-12">
         <div class="nonloop-block-3 owl-carousel" >
-            @foreach($produk as $produk)
+            @foreach($produk as $produk => $item)
             <div class="item">
             <div class="block-4 text-center">
-                <a href="{{ route('user.produk.detail',['id' =>  $produk->id]) }}">
+                <a href="{{ route('admin.produk.{id_produk}',['id' =>  $item->id]) }}">
                 <figure class="block-4-image">
                 <!-- <img src="{{ asset('storage/'.$produk->image) }}" alt="Image placeholder" class="img-fluid" width="100%" style="height:300px"> -->
                 </figure>

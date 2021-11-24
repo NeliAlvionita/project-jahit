@@ -44,3 +44,12 @@ Route::get('/admin/pembayaran/{id_pembayaran}/detail', 'PembayaranController@det
 
 /* Route Tabel Laporan */
 Route::get('/admin/laporan', 'LaporanController@index');
+
+
+/* Route Tabel Home */
+Route::get('/welcome', 'WelcomeController@index');
+
+// Route Pelanggan
+Route::get('/pelanggan', 'PelangganController@pelanggan');
+Route::get('/pelanggan/pembayaran', 'PelangganController@pay');
+Route::get('/pelanggan/pemesanan', 'PelangganController@order');
