@@ -40,6 +40,7 @@ Route::get('/admin/pemesanan/{id_pemesanan}/detail', 'PemesananController@detail
 
 /* Route Tabel Pembayaran */
 Route::get('/admin/pembayaran', 'PembayaranController@index');
+Route::post('/admin/pembayaran/update_status', 'PembayaranController@update_status');
 Route::get('/admin/pembayaran/{id_pembayaran}/detail', 'PembayaranController@detail');
 
 /* Route Tabel Laporan */

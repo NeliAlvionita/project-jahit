@@ -15,4 +15,5 @@ class PemesananController extends Controller
         $pemesanan = Pemesanan::find($request->id_pemesanan);
         return view('/admin/pemesanan/detail',  ['pemesanan' => $pemesanan]);
     }
+    
 }
